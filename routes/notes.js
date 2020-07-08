@@ -6,8 +6,6 @@ import cors from "cors"
 const router = express.Router()
 const db = createDatabase()
 
-app.use(cors())
-
 router.get("/:user", async (req, res) => {
     let data = []
     database.collection("notes").where("user", "==", req.params.user).get().then((query) => {
