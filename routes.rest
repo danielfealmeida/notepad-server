@@ -1,0 +1,31 @@
+GET http://localhost:3000/notes/dNahTDMwa9Q7WWu0x3fY57ijgbp1
+
+###
+
+GET http://localhost:3000/notes/note/1
+
+###
+
+POST http://localhost:3000/notes/dNahTDMwa9Q7WWu0x3fY57ijgbp1/createNote
+Content-Type: application/json
+
+{
+    "title": "Note 1",
+    "content": "It's Note one, right?",
+    "id": "3"
+}
+
+###
+
+POST http://localhost:3000/notes/delete/my-first-note
+
+###
+
+POST http://localhost:3000/notes/update/my-first-note
+Content-Type: application/json
+
+{
+    "title": "Ha!",
+    "content": "But it was me! Dio!",
+    "id": "1"
+}
