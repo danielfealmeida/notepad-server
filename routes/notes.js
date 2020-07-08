@@ -1,9 +1,12 @@
 import express from "express"
 import createDatabase from "../factory/createDatabase.js"
 import database from "../firebase/init.js"
-const router = express.Router()
+import cors from "cors"
 
+const router = express.Router()
 const db = createDatabase()
+
+app.use(cors())
 
 router.get("/:user", async (req, res) => {
     let data = []
