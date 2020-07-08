@@ -1,7 +1,6 @@
 import express from "express"
 import createDatabase from "../factory/createDatabase.js"
 import database from "../firebase/init.js"
-import cors from "cors"
 
 const router = express.Router()
 const db = createDatabase()
