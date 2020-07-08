@@ -6,6 +6,8 @@ import cors from "cors"
 const app = express()
 const database = createDatabase();
 
+app.use(cors());
+
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*")
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization")
@@ -22,7 +24,7 @@ app.listen(3000, () => {
 })
 
 app.use(express.json());
-app.use(cors())
+app.use(express.urlencoded)
 
 //database.add("user", { name: "Daniel" }, "daniel")
 
