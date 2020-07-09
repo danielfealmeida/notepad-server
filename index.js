@@ -24,7 +24,6 @@ app.listen(process.env.PORT || 3000, () => {
 })
 
 app.use(express.json());
-app.use(express.urlencoded)
 
 //database.add("user", { name: "Daniel" }, "daniel")
 
