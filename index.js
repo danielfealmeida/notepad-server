@@ -18,7 +18,7 @@ app.use((req, res, next) => {
     next();
 })
 
-app.listen(3000 || process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("[SERVER] => Server listening.")
     database.start()
 })
@@ -29,3 +29,7 @@ app.use(express.urlencoded)
 //database.add("user", { name: "Daniel" }, "daniel")
 
 app.use("/notes", notesRouter);
+
+app.get("/", (req, res) => {
+    res.send("JSON API")
+})
