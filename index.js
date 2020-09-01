@@ -18,7 +18,7 @@ app.use((req, res, next) => {
     next();
 })
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT, () => {
     console.log("[SERVER] => Server listening.")
     database.start()
 })
